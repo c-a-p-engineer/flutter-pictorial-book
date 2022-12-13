@@ -56132,7 +56132,7 @@ A.eI.prototype={
 L(a){var s=null,r=A.agu(),q=A.pW(10)
 return new A.z0(q,new A.AQ(A.a6Y(s,new A.rb(A.ajS(s,s,new A.pT("assets/images/"+this.c,s,s)),s),B.aU,!1,s,s,s,s,s,s,s,s,s,s,new A.Sh(this,r),s,s,s,s,s,s),s),s)}}
 A.Sh.prototype={
-$0(){this.b.pS(0,new A.O8("assets/voice/"+this.a.d))},
+$0(){this.b.pS(0,new A.O8("assets/voices/"+this.a.d))},
 $S:0}
 A.B4.prototype={
 L(a){var s=null,r=!0

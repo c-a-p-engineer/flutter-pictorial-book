@@ -14,7 +14,7 @@ class ItemCard extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            player.play(DeviceFileSource("assets/voice/$voicePath"));
+            player.play(DeviceFileSource("assets/voices/$voicePath"));
           },
           child: Image.asset("assets/images/$imagePath"),
         ),
