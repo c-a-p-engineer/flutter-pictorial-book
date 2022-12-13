@@ -66,7 +66,7 @@ flutter run -d linux
 
 4. build
 ```
-flutter build web
+flutter build web --base-href "/flutter-pictorial-book/"
 ```
 
 ## Android Studio設定
