@@ -6,7 +6,7 @@ class Animals extends ItemPage {
   Animals({super.key});
 
   @override
-  List<StatelessWidget> lists = [
+  List<StatefulWidget> lists = [
     ItemCard(imagePath: 'dog.png', voicePath: 'dog.mp3'),
     ItemCard(imagePath: 'cat.png', voicePath: 'cat.mp3'),
     ItemCard(imagePath: 'fox.png', voicePath: 'fox.mp3'),

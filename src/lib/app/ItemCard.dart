@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class ItemCard extends StatelessWidget {
-  const ItemCard({super.key, required this.imagePath, required this.voicePath});
+class ItemCard extends StatefulWidget {
+  ItemCard({super.key, required this.imagePath, required this.voicePath});
   final String imagePath;
   final String voicePath;
+
+  _ItemCardState createState() => _ItemCardState();
+}
+
+class _ItemCardState extends State<ItemCard> with TickerProviderStateMixin {
+  bool flag = false;
+  _click() async {
+    setState(() {
+      flag = !flag;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +25,23 @@ class ItemCard extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            player.play(AssetSource("voices/$voicePath"));
+            _click();
+            player.play(AssetSource("voices/${widget.voicePath}"));
+            Future.delayed(Duration(milliseconds: 100), () {
+              _click();
+              Future.delayed(Duration(milliseconds: 100), () {
+                _click();
+                Future.delayed(Duration(milliseconds: 100), () {
+                  _click();
+                });
+              });
+            });
           },
-          child: Image.asset("assets/images/$imagePath"),
+          child: AnimatedRotation(
+            turns: flag ? 0.15 : 0.0,
+            duration: Duration(milliseconds: 100),
+            child: Image.asset("assets/images/${widget.imagePath}"),
+          ),
         ),
       ),
     );

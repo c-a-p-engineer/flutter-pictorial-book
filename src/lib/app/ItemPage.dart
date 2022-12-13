@@ -4,7 +4,7 @@ import 'package:src/app/ItemCard.dart';
 class ItemPage extends StatelessWidget {
   ItemPage({super.key});
 
-  List<StatelessWidget> lists = [];
+  List<StatefulWidget> lists = [];
 
   @override
   Widget build(BuildContext context) {
