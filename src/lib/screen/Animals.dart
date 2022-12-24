@@ -16,5 +16,8 @@ class Animals extends ItemPage {
     ItemCard(imagePath: 'crow.png', voicePath: 'crow.mp3'),
     ItemCard(imagePath: 'sparrow.png', voicePath: 'sparrow.mp3'),
     ItemCard(imagePath: 'frog.png', voicePath: 'frog.mp3'),
+    ItemCard(imagePath: 'snake.png', voicePath: 'snake.mp3'),
+    ItemCard(imagePath: 'monkey.png', voicePath: 'monkey.mp3'),
+    ItemCard(imagePath: 'pig.png', voicePath: 'pig.mp3'),
   ];
 }
