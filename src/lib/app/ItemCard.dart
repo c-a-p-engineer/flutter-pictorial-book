@@ -6,40 +6,42 @@ class ItemCard extends StatefulWidget {
   final String imagePath;
   final String voicePath;
 
+  @override
   _ItemCardState createState() => _ItemCardState();
 }
 
 class _ItemCardState extends State<ItemCard> with TickerProviderStateMixin {
-  bool flag = false;
-  _click() async {
-    setState(() {
-      flag = !flag;
-    });
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 2),
+  );
+
+  late final Animation<double> _animation = CurvedAnimation(
+    parent: _controller,
+    curve: Curves.elasticOut,
+  );
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final player = AudioPlayer();
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            _click();
+            _controller.reset();
+            _controller.forward();
+
+            final AudioPlayer player = AudioPlayer();
             player.play(AssetSource("voices/${widget.voicePath}"));
-            Future.delayed(Duration(milliseconds: 100), () {
-              _click();
-              Future.delayed(Duration(milliseconds: 100), () {
-                _click();
-                Future.delayed(Duration(milliseconds: 100), () {
-                  _click();
-                });
-              });
-            });
           },
-          child: AnimatedRotation(
-            turns: flag ? 0.15 : 0.0,
-            duration: Duration(milliseconds: 100),
+          child: RotationTransition(
+            turns: _animation,
             child: Image.asset("assets/images/${widget.imagePath}"),
           ),
         ),
