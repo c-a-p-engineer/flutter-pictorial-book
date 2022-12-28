@@ -7,13 +7,13 @@ class Vehicle extends ItemPage {
 
   @override
   List<StatefulWidget> lists = [
-    ItemCard(name: 'train'),
-    ItemCard(name: 'bullet_train'),
-    ItemCard(name: 'bus'),
-    ItemCard(name: 'police_car'),
-    ItemCard(name: 'ambulance'),
-    ItemCard(name: 'fire_engine'),
-    ItemCard(name: 'plane'),
-    ItemCard(name: 'helicopter'),
+    ItemCard(category: 'vehicle', name: 'train'),
+    ItemCard(category: 'vehicle', name: 'bullet_train'),
+    ItemCard(category: 'vehicle', name: 'bus'),
+    ItemCard(category: 'vehicle', name: 'police_car'),
+    ItemCard(category: 'vehicle', name: 'ambulance'),
+    ItemCard(category: 'vehicle', name: 'fire_engine'),
+    ItemCard(category: 'vehicle', name: 'plane'),
+    ItemCard(category: 'vehicle', name: 'helicopter'),
   ];
 }

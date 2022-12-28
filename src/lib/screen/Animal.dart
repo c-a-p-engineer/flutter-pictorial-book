@@ -7,17 +7,17 @@ class Animal extends ItemPage {
 
   @override
   List<StatefulWidget> lists = [
-    ItemCard(name: 'dog'),
-    ItemCard(name: 'cat'),
-    ItemCard(name: 'fox'),
-    ItemCard(name: 'pigeon'),
-    ItemCard(name: 'chick'),
-    ItemCard(name: 'chicken'),
-    ItemCard(name: 'crow'),
-    ItemCard(name: 'sparrow'),
-    ItemCard(name: 'frog'),
-    ItemCard(name: 'snake'),
-    ItemCard(name: 'monkey'),
-    ItemCard(name: 'pig'),
+    ItemCard(category: 'animal', name: 'dog'),
+    ItemCard(category: 'animal', name: 'cat'),
+    ItemCard(category: 'animal', name: 'fox'),
+    ItemCard(category: 'animal', name: 'pigeon'),
+    ItemCard(category: 'animal', name: 'chick'),
+    ItemCard(category: 'animal', name: 'chicken'),
+    ItemCard(category: 'animal', name: 'crow'),
+    ItemCard(category: 'animal', name: 'sparrow'),
+    ItemCard(category: 'animal', name: 'frog'),
+    ItemCard(category: 'animal', name: 'snake'),
+    ItemCard(category: 'animal', name: 'monkey'),
+    ItemCard(category: 'animal', name: 'pig'),
   ];
 }

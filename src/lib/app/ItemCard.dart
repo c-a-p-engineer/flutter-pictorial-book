@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class ItemCard extends StatefulWidget {
-  ItemCard({super.key, required this.name});
+  ItemCard({super.key, required this.category, required this.name});
+
+  final String category;
   final String name;
 
   @override
@@ -37,11 +39,13 @@ class _ItemCardState extends State<ItemCard> with TickerProviderStateMixin {
             _controller.forward();
 
             final AudioPlayer player = AudioPlayer();
-            player.play(AssetSource("voices/${widget.name}.mp3"));
+            player.play(
+                AssetSource("${widget.category}/voices/${widget.name}.mp3"));
           },
           child: RotationTransition(
             turns: _animation,
-            child: Image.asset("assets/images/${widget.name}.png"),
+            child: Image.asset(
+                "assets/${widget.category}/images/${widget.name}.png"),
           ),
         ),
       ),
