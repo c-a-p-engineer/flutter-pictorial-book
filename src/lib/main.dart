@@ -43,6 +43,10 @@ class _MyWidgetState extends State<MyWidget> {
                 label: Text('Vehicle'),
               ),
               NavigationRailDestination(
+                icon: Icon(Icons.restaurant),
+                label: Text('Foods'),
+              ),
+              NavigationRailDestination(
                 icon: Icon(Icons.question_mark),
                 label: Text('About'),
               ),

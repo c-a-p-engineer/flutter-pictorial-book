@@ -16,8 +16,10 @@ class Animal extends ItemPage {
     ItemCard(category: 'animal', name: 'crow'),
     ItemCard(category: 'animal', name: 'sparrow'),
     ItemCard(category: 'animal', name: 'frog'),
-    ItemCard(category: 'animal', name: 'snake'),
+    // ItemCard(category: 'animal', name: 'snake'),
     ItemCard(category: 'animal', name: 'monkey'),
     ItemCard(category: 'animal', name: 'pig'),
+    ItemCard(category: 'animal', name: 'cow'),
+    ItemCard(category: 'animal', name: 'penguin'),
   ];
 }
