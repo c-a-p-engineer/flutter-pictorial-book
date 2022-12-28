@@ -36,7 +36,11 @@ class _MyWidgetState extends State<MyWidget> {
             destinations: const [
               NavigationRailDestination(
                 icon: Icon(Icons.pets),
-                label: Text('Animals'),
+                label: Text('Animal'),
+              ),
+              NavigationRailDestination(
+                icon: Icon(Icons.directions_bus),
+                label: Text('Vehicle'),
               ),
               NavigationRailDestination(
                 icon: Icon(Icons.question_mark),

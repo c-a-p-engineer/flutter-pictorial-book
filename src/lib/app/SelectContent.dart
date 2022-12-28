@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:src/screen/About.dart';
-import 'package:src/screen/Animals.dart';
+import 'package:src/screen/Animal.dart';
+import 'package:src/screen/Vehicle.dart';
 
 /// Select Content Main Display
 class SelectContent extends StatelessWidget {
@@ -10,7 +11,7 @@ class SelectContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = [Animals(), About()];
+    List<Widget> pages = [Animal(), Vehicle(), About()];
     if (pages.length <= index) {
       return pages[0];
     }
